@@ -1,27 +1,25 @@
 <template>
   <div id="app">
-    <h1> Shadespire League </h1>
+    <Header />
+    <Stripes />
   </div>
 </template>
 
 <script>
-//import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header'
+import Stripes from './components/Stripes'
+
 
 export default {
   name: 'App',
   components: {
-   // HelloWorld
+    Header,
+    Stripes
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
+
 </style>
