@@ -43,6 +43,7 @@
 <script>
 import axios from 'axios'
 import Messages from './Messages.vue'
+import {mapState} from 'vuex'
 
 export default {
     name: 'Modals',
@@ -79,11 +80,11 @@ export default {
                 method: 'post',
                 url: 'http://localhost:3000/users/login',
                 headers: { 
-                    'Authorization': 'Basic' // anJvdGg6ZHJpdmluZzIwMjA='
+                    'Authorization': 'Inherit' // anJvdGg6ZHJpdmluZzIwMjA='
                 },
                 body: {
-                        username: this.username,
-                        password: this.password
+                        user: this.username,
+                        pw: this.password
                 }                
             };
 
@@ -123,6 +124,10 @@ export default {
         toggleAuth() {
             this.$store.commit('toggleauth');
         }
+    },
+    
+    computed: {
+    ...mapState(['user'])
     }
 }
 </script>

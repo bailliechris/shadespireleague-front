@@ -8,10 +8,10 @@
               <span class="container has-text-centered">
                 <img alt="Underworlds Logo" src="../assets/WHUlogo.jpg" width="300">
                 <div v-if="user.status">
-                    <button class="button is-white" @click="logout">Logout</button>
+                  <button class="button is-white" @click="logout">Logout</button>
                 </div>
                 <div v-else-if="!user.status">
-                <Modals :title="title" :body="body" />
+                 <Modals :title="title" :body="body" />
                 </div>     
               </span>
             </div>
@@ -60,7 +60,7 @@ export default {
     }
   },
   computed: {
-    ...mapState(['user'])
+      ...mapState(['user'])
   }
 }
 </script>
