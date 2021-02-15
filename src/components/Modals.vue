@@ -78,14 +78,15 @@ export default {
 
             var config = {
                 method: 'post',
-                url: 'http://localhost:3000/users/login',
-                headers: { 
-                    'Authorization': 'Inherit' // anJvdGg6ZHJpdmluZzIwMjA='
-                },
-                body: {
+                url: 'http://localhost:3000/users/test',
+/*                headers: { 
+                    'Authorization': 'Basic' // anJvdGg6ZHJpdmluZzIwMjA='
+                }, */
+                data: {
                         user: this.username,
                         pw: this.password
-                }                
+                },       
+                //withCredentials: false         
             };
 
             //const res = await axios.post("http://localhost:5000/api/user/login", {
